@@ -2,13 +2,20 @@
 
 1. [Write Django App Part 1](https://docs.djangoproject.com/en/5.1/intro/tutorial01/)
 
+## Setup:
 
-## Setup instructions
+1. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Initial Setup instructions
 
 1. Create virtual env:
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 ```
 
 2. Activate virtual env: (using vscode bottom bar):
