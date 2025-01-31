@@ -28,3 +28,15 @@ pip install django
 ```bash
 django-admin startproject core .
 ```
+
+5. Run server to make sure everything is ok:
+
+```bash
+python manage.py runserver
+```
+
+6. A project may contain multiple apps:
+
+```bash
+python manage.py startapp polls
+```
