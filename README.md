@@ -1,6 +1,7 @@
 ## Docs tutorials
 
 1. [Write Django App Part 1](https://docs.djangoproject.com/en/5.1/intro/tutorial01/)
+1. [Write Django App Part 2](https://docs.djangoproject.com/en/5.1/intro/tutorial02/)
 
 ## Setup:
 
@@ -46,4 +47,36 @@ python manage.py runserver
 
 ```bash
 python manage.py startapp polls
+```
+
+## Models, Migrations and DB
+
+1. Create models inside the app:
+
+```bash
+touch <app>/models.py
+```
+
+2. Generate the migrations file:
+
+```bash
+python manage.py makemigrations polls
+```
+
+3. See the SQL statements:
+
+```bash
+python manage.py sqlmigrate polls 0001
+```
+
+4. Check the migrations for any issues (before applying to DB):
+
+```bash
+python manage.py check;
+```
+
+5. Apply migrations
+
+```bash
+python manage.py migrate
 ```
