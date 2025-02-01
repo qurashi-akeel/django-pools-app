@@ -43,7 +43,13 @@ django-admin startproject core .
 python manage.py runserver
 ```
 
-6. A project may contain multiple apps:
+6. Migrate existing DB models:
+
+```bash
+python manage.py migrate
+```
+
+7. A project may contain multiple apps:
 
 ```bash
 python manage.py startapp polls
@@ -79,4 +85,24 @@ python manage.py check;
 
 ```bash
 python manage.py migrate
+```
+
+## Interactive Shell:
+
+```bash
+python manage.py shell
+```
+
+Test Functionality:
+
+```py
+from polls.models import Choice, Question
+
+# To get all objects in the Questions table
+Question.objects.all()
+
+from django.utils import timezone
+
+q = Question(question_text="What's new?", pub_date=timezone.now())
+q.save()
 ```
