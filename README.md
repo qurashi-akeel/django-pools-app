@@ -2,6 +2,7 @@
 
 1. [Write Django App Part 1](https://docs.djangoproject.com/en/5.1/intro/tutorial01/)
 1. [Write Django App Part 2](https://docs.djangoproject.com/en/5.1/intro/tutorial02/)
+1. [Write Django App Part 3](https://docs.djangoproject.com/en/5.1/intro/tutorial03/)
 
 ## Setup:
 
@@ -53,6 +54,12 @@ python manage.py migrate
 
 ```bash
 python manage.py startapp polls
+```
+
+8. Create the superuser to access admin dashboard:
+
+```bash
+python manage.py createsuperuser
 ```
 
 ## Models, Migrations and DB
