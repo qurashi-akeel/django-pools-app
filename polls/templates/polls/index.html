@@ -1,0 +1,15 @@
+{% if latest_questions %}
+<ol style="list-style-type: none;">
+  {% for question in latest_questions %}
+  <li>
+    <span>{{ question.id }}</span>
+    <a href="/polls/{{ question.id }}/">
+      <span>{{ question.question_text }}</span> ||
+      <span>{{ question.pub_date }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
