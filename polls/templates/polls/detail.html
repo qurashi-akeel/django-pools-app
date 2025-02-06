@@ -1,8 +1,10 @@
+<h1>Details</h1>
+
 <form action="{% url 'polls:vote' question.id %}" method="post">
   {% csrf_token %}
   <fieldset>
     <legend>
-      <h1>{{ question.question_text }}</h1>
+      <h2>{{ question.question_text }}</h2>
     </legend>
 
     {% if error_message %}
