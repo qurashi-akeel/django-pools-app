@@ -1,17 +1,31 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
 <h1>Polls App</h1>
 
 {% if question_list %}
-<ol style="list-style-type: none;">
+<ol class="box-wrapper">
   {% for question in question_list %}
-  <li>
-    <a href="{% url 'polls:detail' question.id %}">
-      {{ question.question_text }}
-      <span style="color: green;">
-        {{ question.pub_date|date:"M-d H:i" }}
-      </span>
-      <span style="color: red;">
-        Recent: {{ question.was_published_recently }}
-      </span>
+  <li class="box">
+    <h2>
+      <a href="{% url 'polls:detail' question.id %}">
+        <span>{{ question.question_text }}</span>
+      </a>
+    </h2>
+    <p class="text-muted">
+      {{ question.pub_date|date:"M-d H:i" }}
+    </p>
+    <p>
+      <strong>Recent:</strong>
+      {% if question.was_published_recently %}
+      <span class="text-success">Yes</span>
+      {% else %}
+      <span class="text-danger">No</span>
+      {% endif %}
+    </p>
+    <a href="{% url 'polls:detail' question.id %}" class="read-more">
+      <p><span>↝</span> Vote</p>
     </a>
   </li>
   {% endfor %}

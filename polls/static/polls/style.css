@@ -1,0 +1,52 @@
+body {
+  background: white url('images/background.jpg') no-repeat;
+  background-size: cover;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 2rem;
+  list-style: none;
+}
+
+.box {
+  background-color: #23323d;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 20rem;
+  border: white 2px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box a {
+  color: white;
+  
+}
+
+.read-more {
+  display: block;
+  color: #d0e4fa;
+  background: #007bff;
+  border: 1px solid #007bff;
+  margin-top: 2rem;
+  padding: 0px 10px;
+  text-align: center;
+  text-decoration: none;
+}
