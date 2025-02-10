@@ -13,7 +13,7 @@ class QuestionAdmin(ModelAdmin):
         (None, {'fields': ['question_text']}),
         ('Date information', {
             'fields': ['pub_date'],
-            'classes': ['collapse']
+            # 'classes': ['collapse']
         }),
     ]
     inlines = [ChoiceInline]
