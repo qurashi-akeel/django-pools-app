@@ -22,6 +22,7 @@ body {
   height: 80vh;
   gap: 2rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -37,7 +38,6 @@ body {
 
 .box a {
   color: white;
-  
 }
 
 .read-more {
